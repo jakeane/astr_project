@@ -1,11 +1,13 @@
 /* eslint-disable comma-dangle */
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 
 import reducers from './reducers';
-import App from './components/app';
+import App from './components/App';
 
 const store = createStore(
   reducers,

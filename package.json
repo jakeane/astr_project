@@ -42,14 +42,17 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "core-js": "^3.13.1",
     "jquery": "^3.5.1",
     "lodash.debounce": "^4.0.8",
+    "moment": "^2.29.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.1",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "regenerator-runtime": "^0.13.7"
   }
 }
