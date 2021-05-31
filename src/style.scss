@@ -50,6 +50,8 @@ body {
         &.life-on-mars {
           background-color: #ddd;
           color: purple;
+          display: flex;
+          flex-direction: column;
         }
 
         &.select-seat {
