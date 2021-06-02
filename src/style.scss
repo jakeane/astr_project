@@ -36,33 +36,39 @@ body {
 
           h1 {
             font-family: 'Russo One', sans-serif;
-            font-size: 500px;
+            font-size: 17em;
             font-weight: normal;
-            margin: 2.5%;
-            margin-left: 0;
-            margin-bottom: 10%;
+            margin: 0%;
           }
 
           h2 {
             font-family: 'Quicksand', sans-serif;
             font-weight: 300;
-            font-size: 36px;
+            font-size: 2em;
             letter-spacing: 2em; 
-            margin: 1%;
+            margin-bottom: 0%;
+            margin-left: 2%;
+          }
+
+          .title {
+            margin-top: 35%;
+            margin-bottom: 8%;
+            margin-left: 5%;
           }
           
-          .title-container {
+          .welcome-container {
             display: flex;
-            // position: relative;
+            position: 0px;
             // padding: 0px;
-            align-content: left;
             flex-direction: column;
+            align-self: flex-start;
+            
             // margin: 5%;
             // top: 25%;
           }
 
           .cta-btn {
-            margin-left: 2%;
+            margin-left: 7%;
             background: none;
             border: 0.25px solid #FFC297;
             color:#FFC297; 
