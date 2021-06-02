@@ -51,13 +51,14 @@ body {
             margin: 1%;
           }
           
-          .container {
+          .title-container {
             display: flex;
-            position: relative;
+            // position: relative;
+            // padding: 0px;
             align-content: left;
             flex-direction: column;
-            margin: 5%;
-            top: 25%;
+            // margin: 5%;
+            // top: 25%;
           }
 
           .cta-btn {
