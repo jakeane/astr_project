@@ -12,9 +12,7 @@ const NavBar = ({ containerRef, currentSection }) => {
   ];
 
   const getColor = (i) => (
-    i === currentSection
-      ? '#FFC297'
-      : 'grey'
+    i === currentSection && '#FFC297'
   );
 
   const handleNavClick = (i) => {
