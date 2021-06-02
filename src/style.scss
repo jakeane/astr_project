@@ -49,7 +49,7 @@ body {
           }
 
           .title {
-            margin: 35% 0% 8% 5%;
+            margin: 40% 0% 8% 5%;
           }
           
           .welcome-container {
@@ -323,16 +323,140 @@ body {
           background-image: url(/src/img/chooseseat.png);
           background-repeat: no-repeat;
           background-size: 30% 100%;
-          background-position: 80%;
-          background-size: contain;
+          background-position: 1000px;
+          background-size: fixed;
+          justify-content: left;
 
-          button {
-            border-radius: 50px;
-            background-color: #8E8E8E; 
-            height: 20px;
-            width: 20px;
+          .seat-container {
+            display:flex;
+            flex-direction: row;
+            background-color: #F2F2F1;
+            justify-content: left;
+            border-radius: 3px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-right: 20px;
+            margin-bottom: 5%;
           }
 
+          p {
+            font-family: 'Quicksand', sans-serif;
+            letter-spacing: .2em;
+            font-size: 24px;
+            padding-right: 40px;
+            font-weight: normal;
+            padding-left: 50px;
+          }
+
+          #id {
+            font-weight: 500;
+          }
+
+          img {
+            width: 50px;
+            height: 50px;
+            margin-top: 10px;
+            margin-left: 20px;
+          }
+
+          .btn-wrapper {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+          }
+
+          h1 {
+            font-family: 'Saira Extra Condensed', sans-serif;
+            letter-spacing: .3em;
+            font-size: 44px;
+          }
+
+          h2 {
+            font-family: 'Quicksand', sans-serif;
+            letter-spacing: .2em;
+            font-size: 16px;
+            width: 400px;
+            font-weight: normal;
+
+            #bolder {
+              font-weight: bold;
+            }
+          }
+
+          .header-container {
+            flex-direction: column;
+            justify-content: left;
+            height: 70%;
+            margin-left: 15%;
+            width: 550px;
+          }
+
+          .seat-check-D-001 {
+            margin-top: -104px;
+            margin-left: 1px;
+          }
+
+          .box-list {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-left: 429px;
+            margin-top: -130px;
+            width: 50px;
+          }
+
+          .cta-btn {
+            margin-left: 0%;
+            margin-top: 1%;
+            background: #FFC297;
+            border: 0.25px solid #FFC297;
+            color:#fff; 
+            font-family: 'Saira Extra Condensed', sans-serif; 
+            letter-spacing: 0.25em;
+            font-size:12px;
+            width: 100px;
+            padding: 20px 20px 20px 20px;
+          }
+
+          button {
+            margin-left: 10%;
+            margin-top: 1%;
+            background: #ffffff;
+            border: 0.25px solid #dcdcdc;
+            color:#dcdcdc; 
+            font-family: 'Saira Extra Condensed', sans-serif; 
+            letter-spacing: 0.25em;
+            font-size:12px;
+            width: 100px;
+            padding: 20px 30px 20px 30px;
+          }
+
+          .cta-btn:hover {
+            background-color:#ffc29779;
+            transition: 0.3s;
+            cursor: pointer;
+          }
+
+          input[type=checkbox] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            /* create custom checkbox appearance */
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 22px;
+            background-color: #BCBCBC;
+            margin-right: 10px;
+        
+            &:checked{
+                background-color: #FFC297;
+            }
+        
+            &:focus{
+                outline: none !important;
+            }
+          }
         }
 
         &.apply {

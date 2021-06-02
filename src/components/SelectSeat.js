@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 import React, { Component } from 'react';
 
 const OPTIONS = [
@@ -5,6 +6,10 @@ const OPTIONS = [
   'G-002',
   'G-003',
 ];
+
+const CONFRIM_MESSAGE = 'Your tickets have been booked. We look forward to seeing you soon!';
+
+const CANCEL_MESSAGE = 'Your flight has been canceled. Please let us know if there is anything we can do to make your experience more enjoyable.';
 
 class SelectSeat extends Component {
   constructor() {
@@ -51,9 +56,9 @@ class SelectSeat extends Component {
   renderButtons = () => {
     if (Object.keys(this.state.checkboxes).filter((checkbox) => this.state.checkboxes[checkbox]).length !== 0) {
       return (
-        <div className="button-container">
-          <button type="button" className="confirm">Confirm</button>
-          <button type="button" className="cancel">Cancel</button>);
+        <div className="btn-wrapper">
+          <button type="button" className="cta-btn" onClick={() => alert(CONFRIM_MESSAGE)}>Confirm</button>
+          <button type="button" className="cancel" onClick={() => alert(CANCEL_MESSAGE)}>Cancel</button>
         </div>
       );
     } else {
@@ -64,17 +69,18 @@ class SelectSeat extends Component {
   render() {
     return (
       <section className="select-seat">
-        <div className="seat-list">
-          {this.createCheckboxes()}
-        </div>
         <div className="header-container">
           <h1>Select your seat</h1>
-          <p>Please ensure that your chosen seats are accurate before continuing.</p>
-          <h3>You have selected:</h3>
+          <h2>Please ensure that your chosen seats are accurate before continuing. <br /><br />
+            <span id="bolder">You have selected:</span>
+          </h2>
           <div className="seat-list">
             {this.renderSeatInfo()}
           </div>
           {this.renderButtons()}
+        </div>
+        <div className="box-list">
+          {this.createCheckboxes()}
         </div>
 
       </section>
@@ -96,9 +102,9 @@ const Checkbox = ({ label, isSelected, onCheckboxChange }) => (
 
 const Seat = ({ id }) => (
   <div className="seat-container">
-    <p>{id}</p>
+    <p id="id">{id}</p>
     <p>2021.08.15</p>
-    <img src="src/img/check.png" alt="check" />
+    <img src="src/img/check.png" alt="check" className="checkmark" />
   </div>
 );
 

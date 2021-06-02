@@ -4,7 +4,6 @@ const Welcome = () => {
   return (
     <section className="welcome">
       <div className="welcome-container">
-        <p>JJT Realitors</p>
         <div className="title">
           <h2>WELCOME</h2>
           <h1>HOME</h1>
