@@ -27,7 +27,6 @@ body {
         height: 100vh;
   
         &.welcome {
-          width: 100%;
           justify-content:left;
           background-image: url(/src/img/mars.png); 
           background-size: cover;
@@ -46,25 +45,18 @@ body {
             font-weight: 300;
             font-size: 2em;
             letter-spacing: 2em; 
-            margin-bottom: 0%;
-            margin-left: 2%;
+            margin: 0% 0% 0% 2%;
           }
 
           .title {
-            margin-top: 35%;
-            margin-bottom: 8%;
-            margin-left: 5%;
+            margin: 35% 0% 8% 5%;
           }
           
           .welcome-container {
             display: flex;
             position: 0px;
-            // padding: 0px;
             flex-direction: column;
             align-self: flex-start;
-            
-            // margin: 5%;
-            // top: 25%;
           }
 
           .cta-btn {
