@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 import React, { Component } from 'react';
 
 class Apply extends Component {

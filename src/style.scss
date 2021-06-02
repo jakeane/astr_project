@@ -16,6 +16,26 @@ body {
 
       scroll-snap-type: y mandatory;
       overflow-y: scroll;
+
+      nav {
+        position: absolute;
+        color: #888;
+        rotate: 90;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100vh;
+        right: 0;
+        text-align: center;
+        width: 124px;
+
+        h3 {
+          transform: rotate(90deg);
+          font-family: 'Quicksand', sans-serif;
+          letter-spacing: 0.05em;
+          padding: 3px; 
+        }
+      }
   
       section {
         display: flex;
@@ -33,6 +53,7 @@ body {
           background-size: cover;
           background-repeat: no-repeat;
           color: #FFC297;
+          margin-right: 124px;
 
           h1 {
             font-family: 'Russo One', sans-serif;
@@ -199,7 +220,7 @@ body {
             flex-direction: column;
             width: 100%;
             margin-bottom:5%;
-            margin-right:5%;
+            margin-right: 124px;
             margin-left: 5%;
 
           
@@ -303,7 +324,7 @@ body {
             flex-direction: column;
             justify-content: space-around;
             height: 80%;
-            margin-right: 20px;
+            margin-right: 124px;
 
             .facts {
               text-align: right;
