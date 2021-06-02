@@ -55,6 +55,7 @@ const LifeOnMars = () => {
             {weather.max_temp && <p>High: {weather.max_temp}°C</p>}
             {weather.min_temp && <p>Low: {weather.min_temp}°C</p>}
             {weather.local_uv_irradiance_index && <p>UV Radiation: {weather.local_uv_irradiance_index}</p>}
+            <p className="weather-note">Recorded from the Curiosity rover at Gale Crater</p>
           </div>
         </div>
       </div>
