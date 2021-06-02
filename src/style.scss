@@ -170,8 +170,19 @@ body {
         }
 
         &.select-seat {
-          background-color: #eee;
-          color: pink;
+          background-image: url(/src/img/chooseseat.png);
+          background-repeat: no-repeat;
+          background-size: 30% 100%;
+          background-position: 80%;
+          background-size: contain;
+
+          button {
+            border-radius: 50px;
+            background-color: #8E8E8E; 
+            height: 20px;
+            width: 20px;
+          }
+
         }
 
         &.apply {
