@@ -228,8 +228,70 @@ body {
         }
   
         &.amenities {
-          background-color: #ccc;
-          color: red;
+          background-color: #fff;
+          color: #000;
+          display: flex;
+          flex-direction: row;
+
+          h1 {
+            font-family: 'Saira Extra Condensed', sans-serif;
+            letter-spacing: .3em;
+            width: 100%;
+            font-size: 44px;
+          }
+
+          .facts {
+            font-family: 'Quicksand', sans-serif;
+            letter-spacing: .3em;
+            font-size: 14px;
+            margin: 3%;
+
+            .fancy {
+              color: #FFC297;
+              font-weight: 900;
+            }
+
+          }
+
+          .left {
+            height: 100%;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            margin-left: 5%;
+            margin-right: 5%;
+
+            .pod {
+              background-image: url('/src/img/pod-home.png');
+              background-size: cover;
+              width: 100%;
+              height: 65%;
+            }
+
+            .facts-horiz {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-evenly;
+            }
+          }
+          .right {
+            height: 100%;
+            padding-top: 20%;
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+
+            h1 {
+              margin-bottom: 5%;
+            }
+
+            h3 {
+              font-weight: 300;
+              letter-spacing: .25em;
+              margin-top: 0%;
+            }
+          }
         }
         
         &.life-on-mars {
