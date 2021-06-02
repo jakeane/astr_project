@@ -10,8 +10,8 @@ const SightSeeing = () => {
         <div className="image-stack__item image-stack__item--bottom">
           <img src="/src/img/Rectangle.png" alt="semi-transparent-rectancle" />
         </div>
-        <div className="image-stack__item image-stack__item--middle">
-          <img src="/src/img/mars-locations.jpg" alt="mars" />
+        <div className="image-stack__item image-stack__item--middle2">
+          <img src="/src/img/mars-perseverance.jpeg" alt="perseverance" />
         </div>
       </div>
       <div className="text-container">
@@ -20,7 +20,10 @@ const SightSeeing = () => {
 
           Do not worry, Mars has never been tectonically active, so we do not expect an eruption anytime soon! <br /> <br />
 
-          <span id="bolder">Your <span id="fancy-text">new world</span> awaits.</span>
+          If you are brave enough, venture out to Jezero Crater to see the brand new Perseverance rover in action! You can see it operate
+          7 instruments as it embarks on its primary mission to seek out signs of ancient life. <br /> <br />
+
+          <span id="bolder">Check out the <span id="fancy-text"><a href="https://mars.nasa.gov/files/mars2020/Mars2020_Fact_Sheet.pdf">Perseverance Factsheet</a></span></span>
         </h2>
       </div>
     </section>
