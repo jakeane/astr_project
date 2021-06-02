@@ -17,6 +17,13 @@ body {
       scroll-snap-type: y mandatory;
       overflow-y: scroll;
 
+      h3.company {
+        color: #FFC297;
+        position: absolute;
+        padding: 20px;
+        margin: 0px;
+      }
+
       nav {
         position: absolute;
         color: #888;

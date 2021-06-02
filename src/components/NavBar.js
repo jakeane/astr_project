@@ -13,7 +13,7 @@ const NavBar = ({ containerRef, currentSection }) => {
 
   const getColor = (i) => (
     i === currentSection
-      ? 'orange'
+      ? '#FFC297'
       : 'grey'
   );
 

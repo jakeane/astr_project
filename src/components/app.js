@@ -25,6 +25,7 @@ const App = () => {
       onScroll={handleScroll}
       ref={containerRef}
     >
+      <h3 className="company">JJT Realtors</h3>
       <NavBar
         containerRef={containerRef}
         currentSection={currentSection}
