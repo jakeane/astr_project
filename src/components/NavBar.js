@@ -7,7 +7,7 @@ const NavBar = ({ containerRef, currentSection }) => {
     'Sight Seeing',
     'Amenities',
     'Life on Mars',
-    'Select Seat',
+    'Book a Tour',
     'Apply',
   ];
 
@@ -28,6 +28,7 @@ const NavBar = ({ containerRef, currentSection }) => {
         <h3
           style={{ color: getColor(i) }}
           onClick={() => handleNavClick(i)}
+          key={String(i)}
         >
           {section}
         </h3>
