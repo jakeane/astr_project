@@ -27,7 +27,7 @@ const Amenities = () => {
           <p><span className="fancy">Rent-a-car</span> <br /> Autonomous driving brought to you by rover-collected data.</p>
         </div>
         <div className="facts">
-          <p><span className="fancy">No Electricity Bills</span> <br /> Take advantage of Mars&apos lack of atmosphere and save.</p>
+          <p><span className="fancy">No Electricity Bills</span> <br /> Take advantage of Mars&apos; lack of atmosphere and save.</p>
         </div>
       </div>
     </section>
