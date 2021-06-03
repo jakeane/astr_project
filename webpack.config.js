@@ -71,6 +71,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: './index.html',
+      favicon: './src/img/apple-touch-icon.png',
     }),
     new HtmlWebpackPlugin({
       template: './src/index.html',

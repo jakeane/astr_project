@@ -1,6 +1,8 @@
 /* eslint-disable no-alert */
 import React, { Component } from 'react';
 
+import check from '../img/check.png';
+
 const OPTIONS = [
   'D-001',
   'G-002',
@@ -137,7 +139,7 @@ const Seat = ({ id }) => (
   <div className="seat-container">
     <p id="id">{id}</p>
     <p>2021.08.15</p>
-    <img src="src/img/check.png" alt="check" className="checkmark" />
+    <img src={check} alt="check" className="checkmark" />
   </div>
 );
 

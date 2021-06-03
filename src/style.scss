@@ -64,11 +64,10 @@ body {
   
         &.welcome {
           justify-content:left;
-          background-image: url(/src/img/mars.png); 
+          background-image: url(img/mars.png); 
           background-size: cover;
           background-repeat: no-repeat;
           color: #FFC297;
-          // margin-right: 124px;
 
           h1 {
             font-family: 'Russo One', sans-serif;
@@ -131,7 +130,7 @@ body {
           display: flex;
           justify-content: flex-end;
           flex-direction: column;
-          background-image: url(/src/img/floorplans.png);
+          background-image: url(img/floorplans.png);
           background-repeat: no-repeat;
           background-size: 60% 100%;
           background-size: contain;
@@ -297,7 +296,7 @@ body {
             margin-top: 5%;
 
             .pod {
-              background-image: url('/src/img/pod-home.png');
+              background-image: url('img/pod-home.png');
               background-size: cover;
               width: 100%;
               height: 65%;
@@ -357,7 +356,7 @@ body {
             }
   
             .landscape {
-              background-image: url(/src/img/marslandscape.png);
+              background-image: url(img/marslandscape.png);
               background-repeat: no-repeat;
               background-size: 100% 100%;
               background-position: right;
@@ -440,14 +439,7 @@ body {
         }
 
         &.select-seat {
-          // background-image: url(/src/img/chooseseat.png);
-          // background-repeat: no-repeat;
-          // background-size: 300px 1000px;
-          // background-position: 75%;
-          // background-size: fixed;
-          // background-size: contain;
           justify-content: left;
-          // margin-right: 124px;
           display: flex;
           flex-direction: row;
           justify-content: space-around;
