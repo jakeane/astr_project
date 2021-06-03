@@ -3,9 +3,9 @@ import React from 'react';
 const Welcome = () => {
   return (
     <section className="welcome">
-      <div className="container">
+      <div className="welcome-container">
         <div className="title">
-          <h2>Welcome</h2>
+          <h2>WELCOME</h2>
           <h1>HOME</h1>
         </div>
         <div className="btn-wrapper">
