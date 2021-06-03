@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useRef, useState } from 'react';
 
 import '../style.scss';
@@ -30,7 +31,7 @@ const App = () => {
         containerRef={containerRef}
         currentSection={currentSection}
       />
-      <Welcome />
+      <Welcome containerRef={containerRef} />
       <FloorPlans />
       <SightSeeing />
       <Amenities />

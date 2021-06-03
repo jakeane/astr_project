@@ -5,6 +5,7 @@ body {
   width: 100vw;
   margin: 0;
   background-color: #fff;
+  
 
   #main {
     width: 100%;
@@ -22,6 +23,8 @@ body {
         position: absolute;
         padding: 20px;
         margin: 0px;
+        font-family: 'Quicksand', sans-serif;
+        letter-spacing: 0.15em;
       }
 
       nav {
@@ -61,11 +64,10 @@ body {
   
         &.welcome {
           justify-content:left;
-          background-image: url(/src/img/mars.png); 
+          background-image: url(img/mars.png); 
           background-size: cover;
           background-repeat: no-repeat;
           color: #FFC297;
-          margin-right: 124px;
 
           h1 {
             font-family: 'Russo One', sans-serif;
@@ -128,7 +130,7 @@ body {
           display: flex;
           justify-content: flex-end;
           flex-direction: column;
-          background-image: url(/src/img/floorplans.png);
+          background-image: url(img/floorplans.png);
           background-repeat: no-repeat;
           background-size: 60% 100%;
           background-size: contain;
@@ -140,7 +142,6 @@ body {
             justify-content: space-evenly;
             align-content: left;
             flex-direction: column;
-            width: 100%;
             margin-left: 5%;
             margin-bottom:5%;
 
@@ -242,12 +243,11 @@ body {
                 width: 100%;
                 font-size: 44px;
             }
-            h2 {
+            p {
               font-family: 'Quicksand', sans-serif;
-              letter-spacing: .3em;
+              letter-spacing: .2em;
               font-size: 16px;
               width: 100%;
-              font-weight: 500;
 
               #bolder {
                 font-weight: 900;
@@ -275,7 +275,7 @@ body {
 
           .facts {
             font-family: 'Quicksand', sans-serif;
-            letter-spacing: .3em;
+            letter-spacing: .2em;
             font-size: 14px;
             margin: 3%;
 
@@ -293,9 +293,10 @@ body {
             flex-direction: column;
             margin-left: 5%;
             margin-right: 5%;
+            margin-top: 5%;
 
             .pod {
-              background-image: url('/src/img/pod-home.png');
+              background-image: url('img/pod-home.png');
               background-size: cover;
               width: 100%;
               height: 65%;
@@ -310,10 +311,11 @@ body {
           .right {
             height: 100%;
             padding-top: 20%;
-            width: 40%;
+            width: 25%;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
+            margin-right: 124px;
 
             h1 {
               margin-bottom: 5%;
@@ -323,6 +325,10 @@ body {
               font-weight: 300;
               letter-spacing: .25em;
               margin-top: 0%;
+            }
+
+            div.facts {
+              margin-left: 0px;
             }
           }
         }
@@ -338,6 +344,7 @@ body {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            margin-left: 65px;
 
             h1 {
               font-family: 'Saira Extra Condensed', sans-serif;
@@ -349,7 +356,7 @@ body {
             }
   
             .landscape {
-              background-image: url(/src/img/marslandscape.png);
+              background-image: url(img/marslandscape.png);
               background-repeat: no-repeat;
               background-size: 100% 100%;
               background-position: right;
@@ -360,8 +367,6 @@ body {
               .weather-pane {
                 background-color: rgba($color: #ddd, $alpha: 0.3);
                 width: 40%;
-                // height: 50%;
-                // height: 160px;
                 margin-top: 30px;
                 margin-left: 30px;
                 padding: 15px;
@@ -434,12 +439,10 @@ body {
         }
 
         &.select-seat {
-          background-image: url(/src/img/chooseseat.png);
-          background-repeat: no-repeat;
-          background-size: 30% 100%;
-          background-position: 1000px;
-          background-size: fixed;
           justify-content: left;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
 
           .seat-container {
             display:flex;
@@ -449,18 +452,20 @@ body {
             border-radius: 3px;
             padding-top: 15px;
             padding-bottom: 15px;
-            padding-right: 20px;
             margin-bottom: 5%;
+            padding-right: 30px;
+
+            p {
+              font-family: 'Quicksand', sans-serif;
+              letter-spacing: .2em;
+              font-size: 24px;
+              padding-right: 32px;
+              font-weight: normal;
+              padding-left: 32px;
+            }
           }
 
-          p {
-            font-family: 'Quicksand', sans-serif;
-            letter-spacing: .2em;
-            font-size: 24px;
-            padding-right: 40px;
-            font-weight: normal;
-            padding-left: 50px;
-          }
+          
 
           #id {
             font-weight: 500;
@@ -501,8 +506,50 @@ body {
             flex-direction: column;
             justify-content: left;
             height: 70%;
-            margin-left: 15%;
-            width: 550px;
+          }
+
+          .plane-body {
+            width: 250px;
+            height: 100%;
+            background-color: white;
+            border-left: 10px solid #ddd;
+            border-right: 10px solid #ddd;
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+            margin-right: 124px;
+
+
+            .seat {
+              width: 30px;
+              height: 30px;
+              margin: 10px;
+              background-color: #ddd;
+              border-radius: 20px;
+              z-index: 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-weight: 100;
+              color: white;
+              font-size: 30px;
+              transition: 0.2s;
+
+              &.available {
+                background-color: white;
+                box-shadow:inset 0px 0px 0px 1px #aaa;
+
+                &.selected {
+                  background-color: #FFC297;
+                }
+
+                &:hover {
+                  cursor: pointer;
+                  box-shadow:inset 0px 0px 0px 1px #FFC297;
+
+                }
+              }
+            }
           }
 
           .seat-check-D-001 {
@@ -514,8 +561,8 @@ body {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            margin-left: 429px;
-            margin-top: -130px;
+            // margin-left: 429px;
+            // margin-top: -130px;
             width: 50px;
           }
 
@@ -579,16 +626,17 @@ body {
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
-
+          align-items: flex-start;
+          
           h1 {
-            width: 100%;
             margin-left: 20%;
             font-family: 'Saira Extra Condensed', sans-serif;
             letter-spacing: .3em;
             font-size: 44px;
           }
-
+          
           form {
+            z-index: 10;
             display: flex;
             flex-direction: column;
             width: 100%;

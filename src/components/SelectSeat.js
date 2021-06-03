@@ -1,6 +1,8 @@
 /* eslint-disable no-alert */
 import React, { Component } from 'react';
 
+import check from '../img/check.png';
+
 const OPTIONS = [
   'D-001',
   'G-002',
@@ -22,6 +24,7 @@ class SelectSeat extends Component {
         }),
         {},
       ),
+      selectedSeats: [],
     };
   }
 
@@ -48,17 +51,17 @@ class SelectSeat extends Component {
   createCheckboxes = () => OPTIONS.map(this.createCheckbox);
 
   renderSeatInfo = () => (
-    Object.keys(this.state.checkboxes).filter((checkbox) => this.state.checkboxes[checkbox]).map((checkbox, i) => <Seat id={checkbox} />)
+    Object
+      .keys(this.state.selectedSeats)
+      .map((seat, i) => <Seat id={{ 0: 'E3', 1: 'G4', 2: 'G5' }[seat] ?? 'J6'} />)
   );
 
-  renderConfirmButton
-
   renderButtons = () => {
-    if (Object.keys(this.state.checkboxes).filter((checkbox) => this.state.checkboxes[checkbox]).length !== 0) {
+    if (Object.keys(this.state.selectedSeats).length !== 0) {
       return (
         <div className="btn-wrapper">
           <button type="button" className="cta-btn" onClick={() => alert(CONFRIM_MESSAGE)}>Confirm</button>
-          <button type="button" className="cancel" onClick={() => alert(CANCEL_MESSAGE)}>Cancel</button>
+          <button type="button" className="cancel" onClick={this.cancelSeats}>Cancel</button>
         </div>
       );
     } else {
@@ -66,7 +69,27 @@ class SelectSeat extends Component {
     }
   }
 
+  cancelSeats = () => {
+    this.setState(() => ({
+      selectedSeats: [],
+    }));
+    alert(CANCEL_MESSAGE);
+  }
+
+  handleSeatClick = (i) => {
+    if (this.state.selectedSeats.includes(i)) {
+      this.setState((prevState) => ({
+        selectedSeats: prevState.selectedSeats.filter((s) => s !== i),
+      }));
+    } else {
+      this.setState((prevState) => ({
+        selectedSeats: [...prevState.selectedSeats, i],
+      }));
+    }
+  }
+
   render() {
+    const availableSeats = [22, 33, 34];
     return (
       <section className="select-seat">
         <div className="header-container">
@@ -79,8 +102,20 @@ class SelectSeat extends Component {
           </div>
           {this.renderButtons()}
         </div>
-        <div className="box-list">
+        {/* <div className="box-list">
           {this.createCheckboxes()}
+        </div> */}
+
+        <div className="plane-body">
+          {Array(95).fill(0).map((_, i) => (
+            // eslint-disable-next-line jsx-a11y/no-static-element-interactions
+            <div
+              className={`seat ${availableSeats.includes(i) && 'available'} ${this.state.selectedSeats.includes(i) && 'selected'}`}
+              key={String(i)}
+              onClick={availableSeats.includes(i) ? () => this.handleSeatClick(i) : () => {}}
+            >{!availableSeats.includes(i) && 'X'}
+            </div>
+          ))}
         </div>
 
       </section>
@@ -104,7 +139,7 @@ const Seat = ({ id }) => (
   <div className="seat-container">
     <p id="id">{id}</p>
     <p>2021.08.15</p>
-    <img src="src/img/check.png" alt="check" className="checkmark" />
+    <img src={check} alt="check" className="checkmark" />
   </div>
 );
 
